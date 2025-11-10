@@ -1,23 +1,13 @@
-const params = new URLSearchParams(window.location.search);
-const orderId = params.get("order_id");
-const stat = params.get("order_status");
-const amount = params.get("order_amount");
-const ref = params.get("reference_id");
-const message = params.get("txMsg");
-
-console.log(stat)
-
-var dis = document.getElementById("front")
-var uns = document.getElementById("unsuccessful")
-
-if (stat === "SUCCESS"){
-    dis.style.display = "inline-block"
-    uns.style.display = "none"
+const path = window.location.pathname;
+var tic = document.getElementById("ticket")
+var unsuccess = document.getElementById("unsuccessful")
+if (path.endsWith("/success")){
+    tic.style.display = "inline-block"
+    unsuccess.style.display = "none"
 }
-
 else{
-    dis.style.display = "none"
-    uns.style.display = "inline-block"
+    tic.style.display = "none"
+    unsuccess.style.display = "inline-block"
 }
 
 function open(){
