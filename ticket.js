@@ -5,6 +5,8 @@ const amount = params.get("order_amount");
 const ref = params.get("reference_id");
 const message = params.get("txMsg");
 
+console.log(stat)
+
 var dis = document.getElementById("front")
 var uns = document.getElementById("unsuccessful")
 
