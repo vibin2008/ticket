@@ -6,10 +6,10 @@ window.onload = function(){
     if (status == "paid"){
         tic.style.display = "inline-block"
         unsuccess.style.display = "none"
-        const price = params.get('price')
-        const data = params.get('date')
-        console.log(price)
-        console.log(data)
+        // const price = params.get('price')
+        // const data = params.get('date')
+        // console.log(price)
+        // console.log(data)
     }
     else{
         tic.style.display = "none"
