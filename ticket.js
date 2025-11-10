@@ -1,13 +1,16 @@
-const path = window.location.pathname;
-var tic = document.getElementById("ticket")
-var unsuccess = document.getElementById("unsuccessful")
-if (path.endsWith("/success")){
-    tic.style.display = "inline-block"
-    unsuccess.style.display = "none"
-}
-else{
-    tic.style.display = "none"
-    unsuccess.style.display = "inline-block"
+window.onload = function(){
+    const path = window.location.pathname;
+    var tic = document.getElementById("ticket")
+    var unsuccess = document.getElementById("unsuccessful")
+    if (path.endsWith("/success")){
+        tic.style.display = "inline-block"
+        unsuccess.style.display = "none"
+        data()
+    }
+    else if((path.endsWith("/unsuccessful"))){
+        tic.style.display = "none"
+        unsuccess.style.display = "inline-block"
+    }
 }
 
 function open(){
@@ -16,3 +19,7 @@ function open(){
                 div.append(a)
                 
             }
+
+function data(){
+
+}
