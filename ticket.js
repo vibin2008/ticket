@@ -1,13 +1,17 @@
 window.onload = function(){
-    const path = window.location.pathname;
+    const params = new URLSearchParams(window.location.search)
+    const status = params.get('status')
     var tic = document.getElementById("ticket")
     var unsuccess = document.getElementById("unsuccessful")
-    if (path.endsWith("/success")){
+    if (status == "paid"){
         tic.style.display = "inline-block"
         unsuccess.style.display = "none"
-        data()
+        const price = params.get('price')
+        const data = params.get('date')
+        console.log(price)
+        console.log(data)
     }
-    else if((path.endsWith("/unsuccessful"))){
+    else{
         tic.style.display = "none"
         unsuccess.style.display = "inline-block"
     }
