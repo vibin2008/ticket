@@ -1,15 +1,15 @@
 window.onload = function(){
     const params = new URLSearchParams(window.location.search)
-    const status = params.get('status')
+    const status = params.get('txStatus')
     var tic = document.getElementById("ticket")
     var unsuccess = document.getElementById("unsuccessful")
-    if (status == "paid"){
+    if (status == "SUCCESS"){
         tic.style.display = "inline-block"
         unsuccess.style.display = "none"
-        // const price = params.get('price')
-        // const data = params.get('date')
-        // console.log(price)
-        // console.log(data)
+        const price = params.get("orderAmount")
+        const data = params.get("txTime")
+        console.log(price)
+        console.log(data)
     }
     else{
         tic.style.display = "none"
